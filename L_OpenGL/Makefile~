@@ -1,0 +1,12 @@
+CC=g++
+CFLAGS=-Wall =Wextra -Werror
+INCLUDES=/usr/include/SDL2/SDL.h
+
+OBJS=main.o
+
+all: Main
+
+Main: $(OBJS)
+	$(CC) -pthread -g -o $@ $(INCLUDES) $^
+
+Display.o: display.cpp display.h
