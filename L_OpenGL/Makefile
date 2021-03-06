@@ -16,3 +16,5 @@ Main: $(SOURCES) $(HEADERS)
 	$(CC) $(CPPFLAGS) -pthread -g -o $@ $^ -lSDL2 -lGLEW -lGL
 
 Display.o: display.cpp display.h
+Shader.o: shader.cpp shader.headers
+Mesh.o: mesh.cpp mesh.h
