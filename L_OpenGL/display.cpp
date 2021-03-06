@@ -27,6 +27,13 @@ Display::~Display(){
     SDL_Quit();
 }
 
+void Display::Clear(float r, float g, float b, float a){
+    //Set window color.
+        glClearColor(r,g,b,a);
+        //Clear color buffer and fill with custom color.
+        glClear(GL_COLOR_BUFFER_BIT);
+}
+
 bool Display::isClosed(){
     return m_isClosed;
 }
